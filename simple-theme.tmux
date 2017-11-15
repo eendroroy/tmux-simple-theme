@@ -2,7 +2,7 @@
 
 TRS='#[fg=gray,bold]#[default]'
 TLS='#[fg=gray,bold]#[default]'
-GIT_BR='#[fg=colour45,bold]#(cd #{pane_current_path}; git rev-parse --abbrev-ref HEAD 2>/dev/null)#[default]'
+GIT_BR='#[fg=white,bold]#(cd #{pane_current_path}; git rev-parse --abbrev-ref HEAD 2>/dev/null)#[default]'
 
 TMUX_BG_COLOUR='colour236'
 
@@ -37,4 +37,3 @@ tmux set-window-option -g window-status-bell-fg black
 tmux set-window-option -g window-status-content-attr bold
 tmux set-window-option -g window-status-content-bg colour226
 tmux set-window-option -g window-status-content-fg black
-
