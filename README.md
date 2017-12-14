@@ -6,7 +6,7 @@ Meh
 
 ## Screensot
 
-[![simple-theme.png]](https://raw.githubusercontent.com/eendroroy/tmux-simple-theme/master/simple-theme.png)
+![simple-theme.png](https://raw.githubusercontent.com/eendroroy/tmux-simple-theme/master/simple-theme.png)
 
 ## LICENSE
 
