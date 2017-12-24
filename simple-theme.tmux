@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+tmux set -g @cpu_low_icon "ᚋ"
+tmux set -g @cpu_medium_icon "ᚌ"
+tmux set -g @cpu_high_icon "ᚍ"
+
 TRS='#[fg=colour255,bold]#[default]'
 TLS='#[fg=colour255,bold]#[default]'
 GIT_BR='#[fg=white,bold]#(cd #{pane_current_path}; git rev-parse --abbrev-ref HEAD 2>/dev/null)#[default]'
@@ -15,7 +19,7 @@ tmux set-window-option -g status-fg colour255
 tmux set-window-option -g status-bg "$TMUX_BG_COLOUR"
 tmux set-window-option -g status-left "#[bg=colour255] #{?client_prefix,#[fg=colour232]#[bold]🞉, }#[bg=colour255,fg=colour232] #S #[fg=colour232,reverse] "
 tmux set-window-option -g status-left-length 60
-tmux set-window-option -g status-right "$TRS #[fg=colour231]#S:#I:#P $TRS#[fg=colour231,nobold] %a #[bold]%H:%M:%S "
+tmux set-window-option -g status-right "$TRS #{cpu_fg_color}#{cpu_icon}#{cpu_percentage}#[default] $TRS #{battery_status_fg}#{battery_percentage}#[default] $TRS #[fg=colour231]#S:#I:#P $TRS#[fg=colour231,nobold] %a #[bold]%H:%M:%S "
 # tmux set-window-option -g status-right "$GIT_I$GIT_BR $TRS #[fg=colour231]#S:#I:#P $TRS#[fg=colour231] #H $TRS#[fg=colour231,nobold] %b %d %a #[bold]%H:%M "
 tmux set-window-option -g status-right-length 80
 tmux set-window-option -g window-status-current-format "$TMUX_PANE_FORMAT$TLS"
